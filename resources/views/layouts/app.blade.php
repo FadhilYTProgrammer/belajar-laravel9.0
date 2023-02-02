@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-{{-- http://bit.ly/mastering-task-index --}}
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,9 +20,11 @@
 </head>
 
 <body>
-    
+
     @include('components.navbar')
     @yield('main')
+  
+    
 
     <!-- Optional JavaScript; choose one of the two! -->
 

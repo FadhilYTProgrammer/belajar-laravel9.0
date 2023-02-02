@@ -12,20 +12,11 @@
 @endif
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('register') }}" method="POST">
+            <form action="{{ route('password-update') }}" method="POST">
                  @csrf
                 <div class="mb-3">
-                    <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="name" value="{{old('name')}}">
-                        @error('name')
-                        <span class="text-danger">
-                            {{$message}}
-                        </span>
-                    @enderror
-                </div>
-                <div class="mb-3">
                     <label for="" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" value="{{old('email')}}">
+                    <input type="email" class="form-control" name="email" value="{{old('email', $request->email )}}">
                         @error('email')
                         <span class="text-danger">
                             {{$message}}

@@ -12,25 +12,16 @@
 @endif
     <div class="card">
         <div class="card-body">
-            <form action="{{ url('/tasks') }}" method="POST">
+            <form action="{{ route('password.request') }}" method="POST">
                  @csrf
                 <div class="mb-3">
-                    <label for="" class="form-label">User</label>
-                    <input type="text" class="form-control" name="user" value="{{old('user')}}">
-                        @error('user')
+                    <label for="" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" value="{{old('email')}}">
+                        @error('email')
                         <span class="text-danger">
                             {{$message}}
                         </span>
                     @enderror
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Task</label>
-                    <textarea class="form-control" id="" rows="3" name="task" {{old('user')}}></textarea>
-                    @error('task')
-                    <span class="text-danger">
-                        {{$message}}
-                    </span>
-                @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

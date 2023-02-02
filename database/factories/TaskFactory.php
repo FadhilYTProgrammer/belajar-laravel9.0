@@ -13,10 +13,9 @@ class TaskFactory extends Factory
      */
     public function definition()
     {
-        // php artisan make:factory TaskFactory untuk membuat file Factory
         return [
-            'user' => $this -> faker->name(),
-            'task' => $this -> faker->word()
+            'user' => $this -> faker -> name(),
+            'task' => $this -> faker -> word(),
         ];
     }
 }

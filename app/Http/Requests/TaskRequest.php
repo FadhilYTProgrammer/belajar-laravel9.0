@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests;
 
+
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-
 class TaskRequest extends FormRequest
 {
     /**
@@ -35,9 +35,10 @@ class TaskRequest extends FormRequest
         ];
     }
 
-    public function messages(){
+    public function messages()
+    {
         return[
-            'required' => 'isian :attribute harus diisi', 
+            'required' => 'islam :attribute harus diisi', 
             'user.required' => 'nama pengguna harus diisi'
         ];
     }
