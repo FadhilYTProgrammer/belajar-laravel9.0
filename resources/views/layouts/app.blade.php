@@ -13,18 +13,15 @@
     <title>Task Management</title>
 
     <style>
-        .group-action a {
-            text-decoration: none;
-        }
+    .group-action a {
+        text-decoration: none;
+    }
     </style>
 </head>
 
 <body>
-
     @include('components.navbar')
     @yield('main')
-  
-    
 
     <!-- Optional JavaScript; choose one of the two! -->
 

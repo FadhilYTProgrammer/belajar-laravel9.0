@@ -15,7 +15,7 @@ class TaskFactory extends Factory
     {
         return [
             'user' => $this -> faker -> name(),
-            'task' => $this -> faker -> word(),
+            'task' => $this -> faker -> word()
         ];
     }
 }
