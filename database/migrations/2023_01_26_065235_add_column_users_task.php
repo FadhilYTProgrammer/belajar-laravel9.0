@@ -3,8 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
-class AddColumnRoleUsersTable extends Migration
+// php artisan make:migration add_column_users_task --table=tasks
+class AddColumnUsersTask extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddColumnRoleUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table -> string('role')->nullable()->after('email');
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->string('user')->after('task');
         });
     }
 
@@ -25,8 +25,8 @@ class AddColumnRoleUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('role');
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->dropColumn('user');
         });
     }
 }

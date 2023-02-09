@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+    {{-- https://bit.ly/mastering-task-index --}}
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,9 +13,9 @@
     <title>Task Management</title>
 
     <style>
-    .group-action a {
-        text-decoration: none;
-    }
+        .group-action a {
+            text-decoration: none;
+        }
     </style>
 </head>
 

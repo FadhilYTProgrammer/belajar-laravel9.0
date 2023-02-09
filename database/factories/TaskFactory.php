@@ -13,9 +13,10 @@ class TaskFactory extends Factory
      */
     public function definition()
     {
+        // php artisan make:factory TaskFactory
         return [
-            'user' => $this -> faker -> name(),
-            'task' => $this -> faker -> word()
+            'user' => $this -> faker->name(),
+            'task' => $this -> faker->word()
         ];
     }
 }

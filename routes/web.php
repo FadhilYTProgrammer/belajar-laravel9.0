@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\TaskController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,28 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[HomeController::class,'index']);
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get ('/tasks',[TaskController::class,'index']);
-Route::get('/tasks/create',[TaskController::class,'create']);
-Route::get ('/tasks/{id}',[TaskController::class,'show']);
-Route::post ('/tasks',[TaskController::class,'store']);
-Route::get('/tasks/{id}/edit',[TaskController::class, 'edit']);
-Route::patch ('/tasks/{id}',[TaskController::class,'update']);
-Route::delete ('/tasks/{id}',[TaskController::class,'delete']);
+Route::get('/tasks',[TaskController::class, 'index']);
+Route::get('/tasks/create', [TaskController::class, 'create']);
+Route::get('/tasks/{id}', [TaskController::class, 'show']); //show
+Route::post('/tasks', [TaskController::class, 'store']); // store
+Route::get('/tasks/{id}/edit', [TaskController::class, 'edit']);
+Route::patch('/tasks/{id}', [TaskController::class, 'update']); // update
+Route::delete('/tasks/{id}', [TaskController::class, 'delete']); //delete
 
-// Route::post('/tasks/{key}', function($key) use ($taskList){
-//     // return request() -> all();
-//     $taskList[request () -> key] = request()-> task;
-//     return $taskList;
-// });
-
-// Route::patch('/tasks/{key}',function($key) use ($taskList){
-//     $taskList[$key] = request()-> task;
-//     return $taskList;
-// });
-
-// Route::delete('/tasks/{key}', function($key) use ($taskList){
-//     unset($taskList[$key]);
-//     return $taskList;
-// });
